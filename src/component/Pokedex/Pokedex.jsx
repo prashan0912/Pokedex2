@@ -16,7 +16,11 @@ function PokeDex() {
                         </div>
                     </div>
                     <div className="imageContent">
-                        <PokemonList/>
+                        
+                        <div id="imageHeading">Pokemon List</div>
+                        <div id="imageContainer">
+                            <PokemonList />
+                        </div>
                     </div>
                 </div>
             </div>

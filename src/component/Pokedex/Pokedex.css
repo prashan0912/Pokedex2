@@ -34,9 +34,14 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     border: yellow solid 1px;
 }
 
-#heading, #title, #inputName{
+#heading, #title, #inputName, #imageHeading,#imageContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+#imageContainer{
+    height: 370px;
+    border: green solid 1px;
+    display: flex;
 }

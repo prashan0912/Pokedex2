@@ -1,29 +1,49 @@
 import { useEffect, useState } from "react";
-
+import axios from 'axios';
+import Pokemon from "../pokemon/Pokemon";
 function PokemonList() {
 
-    // let a = 'https://pokeapi.co/api/v2/pokemon';
+    const [pokemonList, setPokemonList] = useState([]);
+    const [isLoading, setLoading] = useState(true);
 
 
 
-    const [x, setX] = useState(0);
-    const [y, setY] = useState(0);
+    async function downloadPokemon() {
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
+        // console.log(response);
+        // console.log(response.data);
+        console.log(response.data);
+        const pokemonResults = response.data.results; //sare pokemon ki list ek variable me aa gayi
+        const pokemonResultPromises = pokemonResults.map((p) => axios.get(p.url));//har ek pokemon ki detail ke liye ek request bhej rahe hain
+        // console.log(pokemonResultPromises);
+        const pokemonData = await axios.all(pokemonResultPromises);//sare pokemon ki detail aa gayi
+        console.log(pokemonData);
+        console.log('jai mata di');
 
-
+        const PokeList = pokemonData.map((p) => {
+            const pokemon = p.data;
+            return {
+                id: pokemon.id,
+                name: pokemon.name,
+                image: pokemon.sprites.other.dream_world.front_default,
+                }
+        });
+        console.log(PokeList);
+        setPokemonList(PokeList);
+        setLoading(false);
+    }
     useEffect(() => {
-        console.log("hello useEffect")
-    }, [x, y]);
+        downloadPokemon();
+    }, []);
 
     return (
         <>
+            <div className="pokemon-list-wrapper">
+                <div>Pokemon List</div>
+                {(isLoading) ? 'Loading...' : 'Data Downloaded'}
+                {pokemonList.map((p) => (<Pokemon key={p.id} name={p.name} image={p.image}  id={p.id} /> ))}
+            </div>
 
-            <div>
-                X : {x} <button onClick={() => setX(x + 1)}>INc </button>
-            </div>
-            <div>
-                Y : {y} <button onClick={() => setY(y + 1)}>inc </button>
-            </div>
-            <div className="ListOfPokemon"></div>
         </>
     )
 
