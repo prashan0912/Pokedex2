@@ -10,7 +10,7 @@ function PokeDex() {
                     <div id="heading">
                         <div id="titleInputContainer">
                             <div id="title">
-                                PokeDex
+                                {/* PokeDex */}
                             </div>
                             <div id="inputName"><Search /></div>
                         </div>

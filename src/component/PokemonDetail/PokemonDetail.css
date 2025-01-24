@@ -1,0 +1,9 @@
+.PokemonDetails-wrapper {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    height: 200px;
+}
