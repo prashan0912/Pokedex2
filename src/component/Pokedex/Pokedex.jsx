@@ -22,6 +22,7 @@ function PokeDex() {
                             <PokemonList />
                         </div>
                     </div>
+                    hello
                 </div>
             </div>
         </>
