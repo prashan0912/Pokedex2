@@ -1,47 +1,60 @@
-.PokeDex-wrapper{
+.PokeDex-wrapper {
     border: red solid 1px;
-    height: 700px;
+    height: 1500px;
 }
-#content{
+
+#content {
     margin: 30px;
     border: yellow solid 1px;
-    height: 650px;
+    height: 1400px;
 }
-#heading{
+
+#heading {
     height: 150px;
     border: red solid 1px;
-    
+
 }
-#titleInputContainer{
+
+#titleInputContainer {
     height: 110px;
     width: 700px;
     border: purple solid 1px;
 
 }
-#title{
+
+#title {
     height: 50px;
     border: orange solid 1px;
     font-weight: 900;
-    font-size:xx-large;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#inputName{
+
+#inputName {
     height: 60px;
     border: pink solid 1px;
 }
-.imageContent{
-    height: 400px;
-    border: yellow solid 1px;
+
+.imageContent {
+    height: 1225px;
+    border: rgb(47, 0, 255) solid 1px;
 }
 
-#heading, #title, #inputName, #imageHeading,#imageContainer{
+#heading,
+#title,
+#inputName,
+#imageHeading {
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
-#imageContainer{
-    height: 370px;
+
+#imageContainer {
+    height: 1200px;
     border: green solid 1px;
-    display: flex;
+    overflow: auto;
+    justify-content:space-evenly   ;
+    margin: 5px;
+
 }

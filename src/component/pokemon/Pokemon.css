@@ -1,0 +1,27 @@
+.image {
+    height: 200px;
+    width: 200px;
+    box-sizing: border-box;
+    /* flex-wrap: wrap; */
+    flex-basis: 30%;
+    margin: 50px;
+}
+/* .image:hover {
+    background-color: rgb(105, 95, 81);
+    transition: background-color 0.5s;
+} */
+.image:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;  
+    cursor: pointer;    
+}
+
+.pokeName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: white    ;
+}

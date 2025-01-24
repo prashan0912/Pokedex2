@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Pokemon from "../pokemon/Pokemon";
+import './PokemonList.css';
 function PokemonList() {
 
     const [pokemonList, setPokemonList] = useState([]);
@@ -26,7 +27,7 @@ function PokemonList() {
                 id: pokemon.id,
                 name: pokemon.name,
                 image: pokemon.sprites.other.dream_world.front_default,
-                }
+            }
         });
         console.log(PokeList);
         setPokemonList(PokeList);
@@ -39,10 +40,12 @@ function PokemonList() {
     return (
         <>
             <div className="pokemon-list-wrapper">
-                <div>Pokemon List</div>
                 {(isLoading) ? 'Loading...' : 'Data Downloaded'}
-                {pokemonList.map((p) => (<Pokemon key={p.id} name={p.name} image={p.image}  id={p.id} /> ))}
             </div>
+            <div className="pokelist">
+                {pokemonList.map((p) => (<Pokemon key={p.id} name={p.name} image={p.image} id={p.id} />))}
+            </div>
+
 
         </>
     )
