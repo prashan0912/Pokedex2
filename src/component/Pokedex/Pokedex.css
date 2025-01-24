@@ -1,12 +1,12 @@
 .PokeDex-wrapper {
     border: red solid 1px;
-    height: 1500px;
+    height: 2100px;
 }
 
 #content {
     margin: 30px;
     border: yellow solid 1px;
-    height: 1400px;
+    height: 2000px;
 }
 
 #heading {
@@ -36,7 +36,7 @@
 }
 
 .imageContent {
-    height: 1225px;
+    height: 1850px;
     border: rgb(47, 0, 255) solid 1px;
 }
 
@@ -51,9 +51,9 @@
 }
 
 #imageContainer {
-    height: 1200px;
+    height: 1800px;
     border: green solid 1px;
-    overflow: auto;
+    /* overflow: auto; */
     justify-content:space-evenly   ;
     margin: 5px;
 

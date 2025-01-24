@@ -4,3 +4,28 @@
     justify-content: space-between;
     margin-top: 20px;
 }
+.pokemon-list-wrapper{
+    height: 1800px;
+    border: brown solid 2px;
+}
+.Loading{
+    height: 30px;
+    border: greenyellow solid 2px;
+    display: flex;
+    justify-content: center;
+}
+.pokelist{
+    height: 1720;
+}
+.prevNextButton{
+    height: 50px;
+    border: red solid 1px;
+    display: flex;
+    justify-content: center;
+
+}
+.prevNextButton button{
+    width: 100px ;
+    margin: 5px;
+
+}

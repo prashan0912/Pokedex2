@@ -11,8 +11,8 @@ function PokemonList() {
 
     const [api, setApi] = useState('https://pokeapi.co/api/v2/pokemon');
 
-    const[nextUrl, setNextUrl] = useState('');
-    const[prevUrl, setPrevUrl] = useState('');
+    const [nextUrl, setNextUrl] = useState('');
+    const [prevUrl, setPrevUrl] = useState('');
 
 
     async function downloadPokemon() {
@@ -49,15 +49,18 @@ function PokemonList() {
 
     return (
         <>
-            <div className="pokemon-list-wrapper">
-                {(isLoading) ? 'Loading...' : 'Data Downloaded'}
-            </div>
-            <div className="pokelist">
-                {pokemonList.map((p) => (<Pokemon key={p.id} name={p.name} image={p.image} id={p.id} />))}
-            </div>
-            <div>
-                <button disabled={prevUrl==null} onClick={()=>setApi(prevUrl)}>Prev</button>
-                <button disabled={nextUrl==null} onClick={()=>setApi(nextUrl)}>Next</button>
+            <div className='pokemon-list-wrapper'>
+                <div className="Loading">
+
+                    {(isLoading) ? 'Loading...' : 'Data Downloaded'}
+                </div>
+                <div className="pokelist">
+                    {pokemonList.map((p) => (<Pokemon key={p.id} name={p.name} image={p.image} id={p.id} />))}
+                </div>
+                <div className='prevNextButton'>
+                    <button disabled={prevUrl == null} onClick={() => setApi(prevUrl)}>Prev</button>
+                    <button disabled={nextUrl == null} onClick={() => setApi(nextUrl)}>Next</button>
+                </div>
             </div>
 
         </>
